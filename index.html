@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="uk">
 <head>
     <meta charset="UTF-8">
@@ -50,18 +51,14 @@
 </head>
 <body>
     <div class="container">
-        <br>
-        <h2   >
-            Введіть текст зміна:</h2
-            
-            >
+        <h2>Введіть текст зміна:</h2>
         <input type="text" id="userInput" oninput="updateText()" placeholder="Наприклад, Привіт!">
         <div class="styled-text lobster" id="lobsterText"></div>
         <div class="styled-text roboto" id="robotoText"></div>
         <div class="styled-text playfair" id="playfairText"></div>
     </div>
 
-    <script>
+    <script type="text/javascript">
         function updateText() {
             let text = document.getElementById('userInput').value;
             document.getElementById('lobsterText').textContent = text;
