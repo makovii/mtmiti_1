@@ -25,7 +25,7 @@ jobs:
 
     # Запуск HTMLHint для перевірки всіх HTML-файлів
     - name: Run HTMLHint
-      run: htmlhint --ext html .
+      run: htmlhint "**/*.html"
 
     # Логін в Docker Hub
     - name: Login to Docker Hub
