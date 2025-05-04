@@ -67,7 +67,7 @@ jobs:
     #   run: terraform apply -auto-approve -var="aws_access_key=${{ secrets.TF_AWS_ACCESS_KEY }}" -var="aws_secret_key=${{ secrets.TF_AWS_SECRET_KEY }}"
 
     - name: Create SSH public key file
-      run: echo "${{ secrets.SSH_PUB_KEY }}" > keyforlab2.pub
+      run: echo "${{ secrets.SSH_PUB_KEY }}" > keyforlab2_2.pub
 
     - name: Terraform Init
       run: terraform init
@@ -79,7 +79,7 @@ jobs:
           -var="aws_access_key=${{ secrets.TF_AWS_ACCESS_KEY }}" \
           -var="aws_secret_key=${{ secrets.TF_AWS_SECRET_KEY }}" \
           -var="ami=${{ secrets.AMI_ID }}" \
-          -var="ssh_pub_key=keyforlab2.pub"
+          -var="ssh_pub_key=keyforlab2_2.pub"
 
     - name: Terraform Apply
       if: github.ref == 'refs/heads/main'
@@ -88,4 +88,4 @@ jobs:
           -var="aws_access_key=${{ secrets.TF_AWS_ACCESS_KEY }}" \
           -var="aws_secret_key=${{ secrets.TF_AWS_SECRET_KEY }}" \
           -var="ami=${{ secrets.AMI_ID }}" \
-          -var="ssh_pub_key=keyforlab2.pub"
+          -var="ssh_pub_key=keyforlab2_2.pub"
