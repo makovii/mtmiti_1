@@ -11,7 +11,7 @@ variable "aws_secret_key" {
 variable "ssh_pub_key" {
   description = "Шлях до файлу з публічним SSH ключем, який використовується для підключення"
   type        = string
-  default     = "./keyforlab1.pem"
+  default     = "./id_rsa.pub"
 }
 
 variable "ami" {
