@@ -13,7 +13,7 @@ resource "aws_key_pair" "lab_key" {
 
 # Ресурс для створення Security Group, який дозволяє доступ по HTTP (порт 80) та SSH (порт 22)
 resource "aws_security_group" "web_sg" {
-  name        = "lab-web-sg"
+  name        = "lab-web-sg-2"
   description = "Security group for web server"
 
   ingress {
