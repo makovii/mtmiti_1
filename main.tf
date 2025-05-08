@@ -7,7 +7,7 @@ provider "aws" {
 
 # Ресурс для створення ключа для підключення (SSH ключ)
 resource "aws_key_pair" "lab_key" {
-  key_name   = "keyforlab2-2"
+  key_name   = "keyforlab2-3"
   public_key = file(var.ssh_pub_key)    # наприклад, "~/.ssh/id_rsa.pub"
 }
 
