@@ -7,13 +7,13 @@ provider "aws" {
 
 # Ресурс для створення ключа для підключення (SSH ключ)
 resource "aws_key_pair" "lab_key" {
-  key_name   = "keyforlab2-3"
+  key_name   = "keyforlab2"
   public_key = file(var.ssh_pub_key)    # наприклад, "~/.ssh/id_rsa.pub"
 }
 
 # Ресурс для створення Security Group, який дозволяє доступ по HTTP (порт 80) та SSH (порт 22)
 resource "aws_security_group" "web_sg" {
-  name        = "lab-web-sg-2"
+  name        = "lab2"
   description = "Security group for web server"
 
   ingress {
